@@ -19,7 +19,7 @@ export default function Home() {
       <p>Site Under Construction</p>
       <form className="flex flex-col max-w-64" action={submitHandler}>
         <Label htmlFor="passcode">Passcode</Label>
-        <Input type="password" name="passcode" id="passcode"></Input>
+        <Input type="text" name="passcode" id="passcode"></Input>
         <div className="my-2">
           <Button>Preview</Button>
         </div>
