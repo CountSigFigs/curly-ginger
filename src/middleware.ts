@@ -2,8 +2,9 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export default function middleware(req: NextRequest) {
-  const entryGranted = cookies().get('entryGranted');
+export default async function middleware(req: NextRequest) {
+  const cookieStore = await cookies()
+  const entryGranted = cookieStore.get('entryGranted');
   const path = req.nextUrl.pathname;
 
   if (path === '/') {
